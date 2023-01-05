@@ -9,7 +9,7 @@ export default {
     data(){
         return{
             name: "Thiago",
-            profissao: "Dev C# junior"
+            profissao: "Dev .Net, Vue e Angular junior"
         }
     }
     

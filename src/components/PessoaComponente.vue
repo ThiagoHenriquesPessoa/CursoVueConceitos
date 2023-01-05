@@ -15,7 +15,7 @@ export default{
     },
     data(){
         return{
-            nome: 'Thiago'
+            nome: 'Thiago Henriques'
         }
     }
 }
