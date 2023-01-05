@@ -8,7 +8,7 @@ export default {
     data() {
         return {
             avatar: "/img/1Perfil.jpg",
-            descricao: "Thiago Henriques"
+            descricao: "Thiago Henriques Pessoa"
         }
     }
 }
