@@ -9,16 +9,23 @@
         <li>SqlServer</li>
     </ul>
     <p v-show="mostrar_email">mande uma mensagem para: {{ email }}</p>
+    <p>Para acessar meu portfólio <a v-bind:href="meu_link">basta clicar aqui</a></p>
+    <PictureComponente/>
 </template>
 
 <script>
+import PictureComponente from './PictureComponente.vue'
 export default ({
    name: 'InfoComponente',
+   components: {
+    PictureComponente
+   },
    data(){
     return{
         esta_trabalhando: false,
-        mostrar_email: false,
-        email: 'thiago@gmail.com'
+        mostrar_email: true,
+        email: 'thiago@gmail.com',
+        meu_link: 'https://google.com'
     }
    }
 })
