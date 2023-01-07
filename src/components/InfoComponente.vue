@@ -8,7 +8,10 @@
         <li>CSharp</li>
         <li>SqlServer</li>
     </ul>
-    <p v-show="mostrar_email">mande uma mensagem para: {{ email }}</p>
+    <div>
+        <button @click="showEmail">{{botao_email}}</button>
+    </div>
+    <p >mande uma mensagem para: <a v-show="email">{{ email }}</a></p>
     <p>Para acessar meu portfólio <a v-bind:href="meu_link">basta clicar aqui</a></p>
     <PictureComponente/>
 </template>
@@ -23,10 +26,22 @@ export default ({
    data(){
     return{
         esta_trabalhando: false,
-        mostrar_email: true,
-        email: 'thiago@gmail.com',
-        meu_link: 'https://google.com'
+        mostrar_email: false,
+        email: '',
+        meu_link: 'https://google.com',
+        botao_email: 'Mostrar e-mail'
     }
-   }
+   },
+   methods:{
+    showEmail(){
+        if(this.botao_email === 'Mostrar e-mail'){
+            this.email = 'thiago@gmail.com'
+            this.botao_email = 'Ocultar e-mail'
+        }else{
+            this.email = ''
+            this.botao_email = 'Mostrar e-mail'
+        }
+    }
+}
 })
 </script>
