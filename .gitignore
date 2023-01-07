@@ -22,3 +22,8 @@ pnpm-debug.log*
 *.sln
 *.sw?
 node_modules
+
+
+# file /home/user/gpg-no-tty.sh
+#!/bin/bash
+/usr/bin/gpg --batch --no-tty "$@" 
