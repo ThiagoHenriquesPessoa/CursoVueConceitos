@@ -1,20 +1,36 @@
 <template>
-    <form action="">
-        <div><InputTextForm/></div>
-        <div> <InputTextForm/></div>
+    <form action="" @submit="enviarFormulario($event)">
+        <input type="text" v-model="name">
+        <input type="text" v-model="email">
        <div><SubmitForm/></div>
         
     </form>
 </template>
 
 <script>
-import InputTextForm from './form/InputTextForm.vue';
 import SubmitForm from './form/SubmitForm.vue';
 export default{
     name: 'FormComponente',
     components:{
-        InputTextForm,
         SubmitForm
+    },
+    data(){
+        return{
+            name: '',
+            email: ''
+        }
+    },
+    methods: {
+        enviarFormulario(e){
+            e.preventDefault();
+
+            const name = this.name;
+            const email = this.email;
+
+            console.log("Formulario enviado");    
+            console.log("Nome: " + name); 
+            console.log("E-mail: " + email);       
+        }
     }
 }
 </script>
