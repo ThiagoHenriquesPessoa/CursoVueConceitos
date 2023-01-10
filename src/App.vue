@@ -1,8 +1,10 @@
 <template>
-  <HeaderComponente/>
-  <PrimeiroComponete/>
-  <LifeCycle/>
-  <PessoaComponente/>
+  <div ali>
+    <HeaderComponente/>
+    <PrimeiroComponete/>
+    <LifeCycle/>
+    <PessoaComponente/>  
+  </div>
 </template>
 
 <script>
@@ -26,6 +28,7 @@ export default {
 body{
   background-color: #333;
   color: #fff;
+  text-align: center;
 }
 a{
   color: red;
