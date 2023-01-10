@@ -1,6 +1,6 @@
 <template>
     <form action="" @submit="enviarFormulario($event)">
-        <input type="text" v-model="name">
+        <input type="text" v-model="name"><br>
         <input type="text" v-model="email">
        <div><SubmitForm/></div>
         
