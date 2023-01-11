@@ -1,6 +1,7 @@
 <template>
     <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidades</p>
+
     <p>Utiliso as seguintes tecnologias para back-end:</p>
     <ul>
         <li v-for="(technology, index) in backend_technologies" v-bind:key="index">{{technology}} - Back-End</li>
