@@ -1,9 +1,15 @@
 <template>
-  <div ali>
-    <HeaderComponente/>
-    <PrimeiroComponete/>
-    <LifeCycle/>
-    <PessoaComponente/>  
+  <div class="container">
+    <div class="box">
+      <div class="box-cell box1">
+        <HeaderComponente />
+        <PrimeiroComponete />
+        <LifeCycle />
+      </div>
+      <div class="box-cell box1">       
+        <PessoaComponente />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -33,9 +39,23 @@ body{
 a{
   color: red;
 }
-
 .link{
   background-color: black;
   color: aqua;
+}
+.container .box {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.container .box .box-cell.box1 {
+  background: green;
+  color: white;
+  text-align: center;
+}
+
+.container .box .box-cell.box2 {
+  background: lightgreen;
+  text-align: center;
 }
 </style>

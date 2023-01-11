@@ -2,12 +2,12 @@
     <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidades</p>
     <p>Utiliso as seguintes tecnologias</p>
-    <ul>
-        <li>JavaScript</li>
-        <li>TypeScript</li>
-        <li>CSharp</li>
-        <li>SqlServer</li>
-    </ul>
+    <dl>
+        <dl>JavaScript</dl>
+        <dl>TypeScript</dl>
+        <dl>CSharp</dl>
+        <dl>SqlServer</dl>
+    </dl>
     <div>
         <button @click="showEmail">{{botao_email}}</button>
     </div>
