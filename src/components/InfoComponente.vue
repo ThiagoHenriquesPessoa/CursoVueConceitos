@@ -1,13 +1,15 @@
 <template>
     <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidades</p>
-    <p>Utiliso as seguintes tecnologias</p>
-    <dl>
-        <dl>JavaScript</dl>
-        <dl>TypeScript</dl>
-        <dl>CSharp</dl>
-        <dl>SqlServer</dl>
-    </dl>
+
+    <p>Utiliso as seguintes tecnologias para back-end:</p>
+    <ul>
+        <li v-for="(technology, index) in backend_technologies" v-bind:key="index">{{technology}} - Back-End</li>
+    </ul>
+    <p>Utiliso as seguintes tecnologias para front-end:</p>
+    <ul>
+        <li v-for="technology in frontend_technologies" v-bind:key="technology.id">{{technology.language}} - Front-End</li>
+    </ul>
     <div>
         <button @click="showEmail">{{botao_email}}</button>
     </div>
@@ -29,7 +31,16 @@ export default ({
         mostrar_email: false,
         email: '',
         meu_link: 'https://google.com',
-        botao_email: 'Mostrar e-mail'
+        botao_email: 'Mostrar e-mail',
+        backend_technologies: ['JavaScript', 'TypeScript', 'CSharp', 'SqlServer'],
+        frontend_technologies:[
+            {id:1, language:'HTML'},
+            {id:2, language:'CSS'},
+            {id:3, language:'JavaScript'},
+            {id:4, language:'TypeScript'},
+            {id:5, language:'Vue'},
+            {id:6, language:'Angular'}
+        ]
     }
    },
    methods:{
