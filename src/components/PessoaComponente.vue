@@ -1,6 +1,6 @@
 <template>
     <h2>Essa é a descrição de {{ nome }}</h2>
-    <InfoComponente/>
+    <InfoComponente :compEmail="email"/>
     <FormComponente/>
 </template>
 
@@ -15,7 +15,8 @@ export default{
     },
     data(){
         return{
-            nome: 'Thiago Henriques'
+            nome: 'Thiago Henriques',
+            email: 'henriques@gmail.com'
         }
     }
 }

@@ -1,4 +1,5 @@
 <template>
+    <p>{{ compEmail }}</p>
     <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidades</p>
     <p>Utiliso as seguintes tecnologias</p>
@@ -8,6 +9,7 @@
         <dl>CSharp</dl>
         <dl>SqlServer</dl>
     </dl>
+    <p>{{ compEmail }}</p>
     <div>
         <button @click="showEmail">{{botao_email}}</button>
     </div>
@@ -22,6 +24,9 @@ export default ({
    name: 'InfoComponente',
    components: {
     PictureComponente
+   },
+   props:{
+    compEmail: String
    },
    data(){
     return{
