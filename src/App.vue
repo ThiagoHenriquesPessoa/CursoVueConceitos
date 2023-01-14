@@ -4,9 +4,7 @@
       <div class="box-cell box1">
         <HeaderComponente />
         <PrimeiroComponete />
-        <LifeCycle />
-      </div>
-      <div class="box-cell box1">       
+        <LifeCycle />            
         <PessoaComponente />
       </div>
     </div>
